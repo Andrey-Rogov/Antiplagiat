@@ -172,6 +172,7 @@ with open(sys.argv[1], 'r') as f:
         plagiat1.append(line.split()[0])
         plagiat2.append(line.split()[1])
 
+# In docstrings we have meaningless symbols so we just get rid out of them
 # All files will be renamed to {previous_filename}_done.py
 for f in range(len(plagiat1)):
     delete_docstrings(plagiat1[f])
